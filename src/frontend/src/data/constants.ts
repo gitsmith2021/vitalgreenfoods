@@ -11,6 +11,20 @@ import {
 
 export const FREEZE_CATEGORIES = [
   {
+    id: "moringa-coconut",
+    label: "Moringa & Coconut",
+    description:
+      "Premium, nutrient-dense Moringa and Coconut products. Sourced from organic, certified farms and processed using advanced methods to fully retain their exceptional wellness benefits and purity.",
+    products: [
+      "Moringa leaves powder",
+      "Moringa Tea Bags",
+      "Coconut Powder - High Fat",
+      "Coconut Powder - Low Fat",
+      "Moringa Flower - Dried",
+    ],
+    color: "teal",
+  },
+  {
     id: "vegetables",
     label: "Freeze Dried Vegetables",
     description:
@@ -80,18 +94,12 @@ export const FREEZE_CATEGORIES = [
     color: "emerald",
   },
   {
-    id: "moringa-coconut",
-    label: "Moringa & Coconut",
+    id: "fruit-pulps",
+    label: "Fruit Pulps",
     description:
-      "Premium, nutrient-dense Moringa and Coconut products. Sourced from organic, certified farms and processed using advanced methods to fully retain their exceptional wellness benefits and purity.",
-    products: [
-      "Moringa leaves powder",
-      "Moringa Tea Bags",
-      "Coconut Powder - High Fat",
-      "Coconut Powder - Low Fat",
-      "Moringa Flower - Dried",
-    ],
-    color: "teal",
+      "Premium natural fruit pulps made from high-quality sun-ripened fruits, processed to preserve their rich flavor, thick texture, and natural vitamins.",
+    products: ["Mango Pulp"],
+    color: "orange",
   },
 ];
 
@@ -139,6 +147,8 @@ export const PRODUCT_IMAGES: Record<string, string> = {
   "Coconut Powder - High Fat": "/assets/coconut-powder-high-fat.webp",
   "Coconut Powder - Low Fat": "/assets/coconut-powder-low-fat.webp",
   "Moringa Flower - Dried": "/assets/moringa-flower-dried.webp",
+  // Fruit Pulps
+  "Mango Pulp": "/assets/mango-pulp.webp",
 };
 
 export const CATEGORY_BADGE_COLORS: Record<string, string> = {
@@ -146,6 +156,7 @@ export const CATEGORY_BADGE_COLORS: Record<string, string> = {
   fruits: "bg-amber-100 text-amber-800 border-amber-200",
   microgreens: "bg-emerald-100 text-emerald-800 border-emerald-200",
   "moringa-coconut": "bg-teal-100 text-teal-800 border-teal-200",
+  "fruit-pulps": "bg-orange-100 text-orange-800 border-orange-200",
 };
 
 export const CATEGORY_GRADIENT_COLORS: Record<string, string> = {
@@ -153,6 +164,7 @@ export const CATEGORY_GRADIENT_COLORS: Record<string, string> = {
   fruits: "from-amber-100 to-amber-200",
   microgreens: "from-emerald-100 to-emerald-200",
   "moringa-coconut": "from-teal-100 to-teal-200",
+  "fruit-pulps": "from-orange-100 to-orange-200",
 };
 
 export const WHY_US = [
