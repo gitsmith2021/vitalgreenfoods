@@ -113,6 +113,7 @@ export const PRODUCT_IMAGES: Record<string, string> = {
   Ginger: "/assets/freeze-dried-ginger.webp",
   "Sweet Potato": "/assets/SweetPotato.webp",
   Pumpkin: "/assets/pumpkin.webp",
+  "Cluster Beans": "/assets/cluster-beans.webp",
   "French Beans": "/assets/freeze-dried-green-beans-500x500.webp",
   Shallots: "/assets/shallots.webp",
   Onion: "/assets/onion.webp",
@@ -136,11 +137,19 @@ export const PRODUCT_IMAGES: Record<string, string> = {
   Strawberry: "/assets/product-strawberry-transparent.dim_400x300.webp",
   // Microgreens
   Broccoli: "/assets/product-broccoli-microgreen-transparent.dim_400x300.webp",
+  "Amaranthus (Red / Green)": "/assets/amaranthus.webp",
   "Radish (Pink / White)":
     "/assets/product-radish-microgreen-transparent.dim_400x300.webp",
   "Red Cabbage": "/assets/red-cabbage.webp",
-  Spinach: "/assets/spinach.webp",
+  Sunflower: "/assets/sunflower.webp",
+  Mint: "/assets/mint.webp",
+  Basil: "/assets/basil.webp",
+  "Pea Shoot": "/assets/pea-shoot.webp",
+  Fenugreek: "/assets/fenugreek.webp",
   Wheatgrass: "/assets/product-wheatgrass-transparent.dim_400x300.webp",
+  Mustard: "/assets/mustard.webp",
+  Spinach: "/assets/spinach.webp",
+  Lemongrass: "/assets/lemongrass.webp",
   // Moringa & Coconut
   "Moringa leaves powder": "/assets/moringa-leaves-powder.webp",
   "Moringa Tea Bags": "/assets/moringa-tea-bags.webp",
