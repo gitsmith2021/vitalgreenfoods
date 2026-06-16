@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Fonts ─────────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans.woff2") format("woff2");
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Core Palette — Botanical Green + Earthy Gold */
+    /* Background: warm ivory */
+    --background: 0.975 0.008 80;
+    --foreground: 0.18 0.035 155;
+
+    /* Cards: pure warm white */
+    --card: 0.99 0.004 90;
+    --card-foreground: 0.18 0.035 155;
+
+    /* Popover */
+    --popover: 0.99 0.004 90;
+    --popover-foreground: 0.18 0.035 155;
+
+    /* Primary: Deep Forest Green */
+    --primary: 0.35 0.12 155;
+    --primary-foreground: 0.97 0.01 90;
+
+    /* Secondary: Sage Green */
+    --secondary: 0.92 0.03 145;
+    --secondary-foreground: 0.25 0.1 155;
+
+    /* Muted */
+    --muted: 0.94 0.012 100;
+    --muted-foreground: 0.52 0.04 145;
+
+    /* Accent: Earthy Gold */
+    --accent: 0.82 0.14 75;
+    --accent-foreground: 0.18 0.06 55;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Border / Input */
+    --border: 0.88 0.022 145;
+    --input: 0.88 0.022 145;
+    --ring: 0.45 0.1 155;
+
+    /* Charts */
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    /* Sidebar */
+    --sidebar: 0.975 0.008 80;
+    --sidebar-foreground: 0.18 0.035 155;
+    --sidebar-primary: 0.35 0.12 155;
+    --sidebar-primary-foreground: 0.97 0.01 90;
+    --sidebar-accent: 0.92 0.03 145;
+    --sidebar-accent-foreground: 0.25 0.1 155;
+    --sidebar-border: 0.88 0.022 145;
+    --sidebar-ring: 0.45 0.1 155;
+
+    /* Custom tokens */
+    --green-deep: 0.28 0.13 158;
+    --green-mid: 0.42 0.14 152;
+    --green-light: 0.88 0.06 145;
+    --gold-warm: 0.76 0.15 72;
+    --gold-muted: 0.9 0.1 80;
+    --earth-dark: 0.22 0.04 50;
+    --cream: 0.97 0.018 88;
+    --cream-dark: 0.93 0.025 82;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "General Sans", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Fraunces", Georgia, serif;
+  }
+}
+
+@layer utilities {
+  /* Grain texture overlay */
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 128px 128px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Section padding rhythm */
+  .section-pad {
+    @apply py-20 md:py-28;
+  }
+
+  /* Heading gradient */
+  .heading-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(var(--green-deep)) 0%,
+      oklch(var(--green-mid)) 60%,
+      oklch(var(--gold-warm)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Gold underline decoration */
+  .gold-underline {
+    position: relative;
+    display: inline-block;
+  }
+  .gold-underline::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, oklch(var(--gold-warm)), transparent);
+    border-radius: 999px;
+  }
+
+  /* Nav glass effect */
+  .nav-glass {
+    background: oklch(var(--cream) / 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid oklch(var(--border));
+    box-shadow: 0 2px 20px oklch(var(--green-deep) / 0.06);
+  }
+
+  /* Product card hover */
+  .product-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px oklch(var(--green-mid) / 0.12), 0 2px 8px
+      oklch(var(--green-deep) / 0.08);
+  }
+
+  /* Why Us card */
+  .why-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .why-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px oklch(var(--green-mid) / 0.15), 0 2px 6px
+      oklch(var(--green-deep) / 0.1);
+  }
+}
