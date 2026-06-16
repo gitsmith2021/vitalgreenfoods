@@ -25,6 +25,14 @@ export const FREEZE_CATEGORIES = [
     color: "teal",
   },
   {
+    id: "fruit-pulps",
+    label: "Fruit Pulps",
+    description:
+      "Premium natural fruit pulps made from high-quality sun-ripened fruits, processed to preserve their rich flavor, thick texture, and natural vitamins.",
+    products: ["Mango Pulp"],
+    color: "orange",
+  },
+  {
     id: "vegetables",
     label: "Freeze Dried Vegetables",
     description:
@@ -92,14 +100,6 @@ export const FREEZE_CATEGORIES = [
       "Lemongrass",
     ],
     color: "emerald",
-  },
-  {
-    id: "fruit-pulps",
-    label: "Fruit Pulps",
-    description:
-      "Premium natural fruit pulps made from high-quality sun-ripened fruits, processed to preserve their rich flavor, thick texture, and natural vitamins.",
-    products: ["Mango Pulp"],
-    color: "orange",
   },
 ];
 
