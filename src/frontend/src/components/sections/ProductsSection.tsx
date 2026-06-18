@@ -78,6 +78,7 @@ export function ProductsSection() {
     microgreens: "bg-emerald-600 text-white border-emerald-600",
     "moringa-coconut": "bg-teal-600 text-white border-teal-600",
     "fruit-pulps": "bg-orange-600 text-white border-orange-600",
+    spices: "bg-red-600 text-white border-red-600",
   };
 
   const headingColors: Record<string, string> = {
@@ -86,6 +87,7 @@ export function ProductsSection() {
     microgreens: "text-emerald-700",
     "moringa-coconut": "text-teal-700",
     "fruit-pulps": "text-orange-700",
+    spices: "text-red-700",
   };
 
   const allTabs = [

@@ -56,8 +56,16 @@ export function FoundersSection() {
               {/* Left Column: Avatar & Name */}
               <div className="flex flex-col items-center text-center md:items-start md:text-left md:w-1/3 lg:w-1/4 flex-shrink-0 gap-5">
                 <div className="w-32 h-32 md:w-48 md:h-48 rounded-2xl bg-green-light flex items-center justify-center flex-shrink-0 overflow-hidden shadow-sm border border-border/50">
-                  {/* Photo Placeholder */}
-                  <Users size={48} className="text-green-deep/30" />
+                  {"image" in founder && typeof founder.image === "string" ? (
+                    <img
+                      src={founder.image}
+                      alt={founder.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    /* Photo Placeholder */
+                    <Users size={48} className="text-green-deep/30" />
+                  )}
                 </div>
                 <div>
                   <h3 className="font-display text-2xl font-semibold text-foreground">

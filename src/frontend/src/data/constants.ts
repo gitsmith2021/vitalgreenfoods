@@ -21,6 +21,7 @@ export const FREEZE_CATEGORIES = [
       "Coconut Powder - High Fat",
       "Coconut Powder - Low Fat",
       "Moringa Flower - Dried",
+      "Gum",
     ],
     color: "teal",
   },
@@ -101,6 +102,26 @@ export const FREEZE_CATEGORIES = [
     ],
     color: "emerald",
   },
+  {
+    id: "spices",
+    label: "Spices",
+    description:
+      "Premium, aromatic spices sourced from India's finest spice gardens. Carefully processed to retain their rich oils, intense flavor, and natural health-promoting properties.",
+    products: [
+      "Turmeric",
+      "Pepper",
+      "Ginger (Dried and freeze dried)",
+      "Cardamom Green",
+      "Clove",
+      "Cumin seed",
+      "Coriander seed",
+      "Fenugreek seeds",
+      "Curry leaf powder",
+      "Mustard seed Brown and Black",
+      "Tamarind",
+    ],
+    color: "red",
+  },
 ];
 
 export const PRODUCT_IMAGES: Record<string, string> = {
@@ -156,8 +177,21 @@ export const PRODUCT_IMAGES: Record<string, string> = {
   "Coconut Powder - High Fat": "/assets/coconut-powder-high-fat.webp",
   "Coconut Powder - Low Fat": "/assets/coconut-powder-low-fat.webp",
   "Moringa Flower - Dried": "/assets/moringa-flower-dried.webp",
+  Gum: "/assets/moringa-gum.png",
   // Fruit Pulps
   "Mango Pulp": "/assets/mango-pulp.webp",
+  // Spices
+  Turmeric: "/assets/turmeric.png",
+  Pepper: "/assets/pepper.png",
+  "Ginger (Dried and freeze dried)": "/assets/ginger_spice.png",
+  "Cardamom Green": "/assets/cardamom.png",
+  Clove: "/assets/clove.png",
+  "Cumin seed": "/assets/cumin.png",
+  "Coriander seed": "/assets/coriander.png",
+  "Fenugreek seeds": "/assets/fenugreek_seeds.png",
+  "Curry leaf powder": "/assets/curry_leaf.png",
+  "Mustard seed Brown and Black": "/assets/mustard_seeds.png",
+  Tamarind: "/assets/tamarind.png",
 };
 
 export const CATEGORY_BADGE_COLORS: Record<string, string> = {
@@ -166,6 +200,7 @@ export const CATEGORY_BADGE_COLORS: Record<string, string> = {
   microgreens: "bg-emerald-100 text-emerald-800 border-emerald-200",
   "moringa-coconut": "bg-teal-100 text-teal-800 border-teal-200",
   "fruit-pulps": "bg-orange-100 text-orange-800 border-orange-200",
+  spices: "bg-red-100 text-red-800 border-red-200",
 };
 
 export const CATEGORY_GRADIENT_COLORS: Record<string, string> = {
@@ -174,6 +209,7 @@ export const CATEGORY_GRADIENT_COLORS: Record<string, string> = {
   microgreens: "from-emerald-100 to-emerald-200",
   "moringa-coconut": "from-teal-100 to-teal-200",
   "fruit-pulps": "from-orange-100 to-orange-200",
+  spices: "from-red-100 to-red-200",
 };
 
 export const WHY_US = [
@@ -293,6 +329,7 @@ export const FOUNDERS = [
   {
     name: "Ubakara Sheela R.",
     title: "Co-Founder & Operations",
+    image: "/assets/sheela.png",
     bio: "A seasoned professional with deep expertise in agri-processing, quality management, and value-added food products. She oversees the advanced processing unit in Tiruchirappalli, ensuring that every batch of fruits, vegetables, and grocery products meets the highest international standards. Her focus on innovation has driven VGF's expansion into functional foods and nutraceuticals.",
     expertise: ["Agri-Processing", "Quality Assurance", "Product Innovation"],
   },
